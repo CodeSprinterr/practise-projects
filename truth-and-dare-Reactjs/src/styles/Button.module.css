@@ -1,0 +1,49 @@
+@import './variables.css';
+
+.button {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all var(--transition-speed) ease;
+  border: none;
+  cursor: pointer;
+  min-width: 140px;
+}
+
+.truthBtn {
+  composes: button;
+  background: var(--primary-color);
+  color: var(--text-primary);
+}
+
+.truthBtn:hover {
+  background: color-mix(in srgb, var(--primary-color) 90%, white);
+  transform: translateY(-2px);
+}
+
+.dareBtn {
+  composes: button;
+  background: var(--secondary-color);
+  color: var(--text-primary);
+}
+
+.dareBtn:hover {
+  background: color-mix(in srgb, var(--secondary-color) 90%, white);
+  transform: translateY(-2px);
+}
+
+.nextBtn {
+  composes: button;
+  background: transparent;
+  border: 2px solid var(--text-secondary);
+  color: var(--text-primary);
+  margin-top: var(--spacing-lg);
+}
+
+.nextBtn:hover {
+  background: var(--text-secondary);
+  transform: translateY(-2px);
+}
